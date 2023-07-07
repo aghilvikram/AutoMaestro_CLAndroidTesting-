@@ -1,0 +1,43 @@
+#- runScript: SignupPageObjects.js
+
+appId: "com.caratlane.android"
+
+---
+- launchApp
+- runScript: SignupPageObjects.js
+- tapOn: "SIGNUP"
+- tapOn:
+       text: ${output.signup.mobile}
+- inputText: "6380455178"
+- tapOn: 
+       text: ${output.signup.email}
+- inputText: vprvikram@gmail.com
+- tapOn: 
+      text:  ${output.signup.firstName}
+- inputText: "Vikram"
+- tapOn: 
+       text: ${output.signup.lastName}
+- inputText: "Balasubramanian"
+- hideKeyboard
+- tapOn: 
+       text: ${output.signup.password} 
+- inputText: Vikramaghil777@
+- hideKeyboard
+- tapOn: 
+       text: ${output.signup.confirmPassword} 
+- inputText: Vikramaghil777@
+- hideKeyboard
+- tapOn: "Male"
+- tapOn: "SIGN ME UP"
+- takeScreenshot: SignupPageError
+
+
+
+
+
+
+
+#env:
+   # EMAIL: vprvikram@gmail.com
+   # PASSWORD: Vikramaghil777@
+    #CONFIRM PASSWORD: Vikramaghil777@

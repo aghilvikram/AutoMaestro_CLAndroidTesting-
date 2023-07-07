@@ -1,0 +1,18 @@
+# .maestro/config.yaml
+
+# Maestro config
+# config.yaml
+executionOrder:
+    continueOnFailure: false # default is true
+    flowsOrder:
+        - LoginFlow.yaml
+        - SIgnUpFlow.yaml
+#flows:
+ #  -  
+  #- "Demo_TestCases/*"
+includeTags:
+  - Smoke
+excludeTags:
+  - Regression
+#local:
+  #deterministicOrder: true

@@ -1,0 +1,56 @@
+appId: "com.caratlane.android.f2"
+tags:
+   - Regression
+---
+#- runFlow: LoadElements.yaml
+#- launchApp
+- runFlow: TC_001_LoginFlow.yaml
+- tapOn:
+    id: "com.caratlane.android.f2:id/iv_product"
+    index: 0  
+- tapOn:
+    text: "Got It !"
+    #repeat: 2
+- tapOn:
+    id: "com.caratlane.android.f2:id/listing_screen_proudct_image_view"
+    index: 0
+- tapOn: "ADD TO CART"  
+- swipe:               
+    direction: UP
+- tapOn: "PLACE ORDER"
+- tapOn: "CONTINUE"
+- tapOn:
+    id: "com.caratlane.android.f2:id/close_small_video"
+- tapOn: "SKIP ADDING VIDEO"
+- tapOn: "PROCEED TO PAYMENT"
+- tapOn: "Apply Xclusive Points"
+- tapOn: "Apply xCLusive points"
+- tapOn: "Credit Card"
+- tapOn: "PAY NOW"
+- tapOn: "Credit Card"
+- tapOn: "Enter Card Number"
+- inputText: "5123456789012346"
+- tapOn: "Expiry"
+- inputText: "0225"
+- tapOn:
+    id: "cardCvv"
+- inputText: "123"
+- hideKeyboard  
+- tapOn: "Enter name as on card"
+- inputRandomPersonName
+- tapOn: "un-checked"
+- tapOn: "PROCEED"
+- assertVisible: 
+    id: "password"
+- tapOn:
+    id: "password"
+- inputText: "123456"
+- tapOn: "PAY"
+- extendedWaitUntil:
+    visible: "Transaction Successful" # or any other selector
+    timeout: 10000      # Timeout in milliseconds
+- takeScreenshot: OrderProof
+
+ 
+
+

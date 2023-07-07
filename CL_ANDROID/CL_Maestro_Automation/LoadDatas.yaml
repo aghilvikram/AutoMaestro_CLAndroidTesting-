@@ -1,0 +1,3 @@
+appId: "com.caratlane.android.f2"
+---
+- runScript: Test_Data/SignUpDatas.js

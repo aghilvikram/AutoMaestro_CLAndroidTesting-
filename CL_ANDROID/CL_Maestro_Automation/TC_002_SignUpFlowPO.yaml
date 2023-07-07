@@ -1,0 +1,50 @@
+#- runScript: SignupPageObjects.js
+
+appId: "com.caratlane.android.f2"
+tags:
+  - Smoke
+---
+- runFlow: LoadElements.yaml
+- runFlow: LoadDatas.yaml
+- launchApp
+      #clearState: true
+- startRecording: recording
+- tapOn: "SIGNUP"
+- tapOn:
+       text: ${output.signup.mobile}
+- inputText: "6380455178"      
+- tapOn: 
+       text: ${output.signup.email}
+#- inputRandomEmail
+- inputText: "${output.credentials.email}"
+- hideKeyboard
+- tapOn: 
+      text:  ${output.signup.firstName}
+- inputText: "Vikram"
+- tapOn: 
+       text: ${output.signup.lastName}
+- inputText: "Balasubramanian"
+- hideKeyboard
+- tapOn: 
+       text: ${output.signup.password} 
+- inputText: "${output.credentials.password}"
+- hideKeyboard
+- tapOn: 
+       text: ${output.signup.confirmPassword} 
+- inputText: "${output.credentials.confirmPassword}"
+- hideKeyboard
+- tapOn: "Male"
+- tapOn: "SIGN ME UP"
+- takeScreenshot: SignupPageError
+- stopRecording
+
+
+
+
+
+
+
+#env:
+   # EMAIL: vprvikram@gmail.com
+   # PASSWORD: Vikramaghil777@
+    #CONFIRM PASSWORD: Vikramaghil777@

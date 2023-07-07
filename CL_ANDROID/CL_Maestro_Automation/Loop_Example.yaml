@@ -1,0 +1,7 @@
+- evalScript: ${output.counter = 0}
+- repeat:
+    while:
+      true: ${output.counter < 3}
+    commands:
+      - tapOn: Button
+      - evalScript: ${output.counter = output.counter + 1}

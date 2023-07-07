@@ -1,0 +1,35 @@
+appId: "com.caratlane.android.f2"
+.maestro/config.yaml
+tags:
+  - Smoke
+  - Regression
+---
+- runFlow: LoadElements.yaml
+- launchApp
+       #clearState: true
+- tapOn: ${output.UOB.uobLogin}
+- tapOn: ${output.LOGIN.mobileEmail}
+- inputText: "vprvikram@gmail.com"
+- tapOn: ${output.LOGIN.continueToLogin}
+- tapOn: ${output.ENTERPASSWORD.password}
+- inputText: "eTfBHH4q"
+- assertVisible:
+     text: "Login"
+     index: 0
+- tapOn:  ${output.ENTERPASSWORD.loginButton}
+- tapOn: "Pincode"
+- inputText: "600006"
+- tapOn:
+    id: "com.caratlane.android.f2:id/ivNext"
+     
+     
+
+
+
+
+
+ #clearState: true
+#- tapOn: "Pincode"
+#- inputText: "600006"
+#- tapOn:
+ #   id: "com.caratlane.android:id/ivNext"

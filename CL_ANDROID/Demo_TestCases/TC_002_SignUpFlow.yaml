@@ -1,0 +1,29 @@
+appId: "com.caratlane.android.f2"
+tags:
+ - Smoke
+ - Regression
+---
+- launchApp
+     # clearState: true
+- tapOn: "SIGNUP"
+- tapOn: "Mobile"
+- inputText: "6380455178"
+- tapOn: "Enter Email"
+- inputText: "vprvikram@gmail.com"
+- hideKeyboard
+- tapOn: "First Name"
+- inputText: "Vikram"
+- tapOn: "Last Name"
+- inputText: "Balasubramanian"
+- tapOn: "Back"
+- tapOn: "Password"
+- inputText: "Vikramghil777@"
+- hideKeyboard
+- tapOn: "Confirm Password"
+- inputText: "Vikramghil777@"
+- hideKeyboard
+- tapOn: "Male"
+- tapOn: "SIGN ME UP"
+
+
+

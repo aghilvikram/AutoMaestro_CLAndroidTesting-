@@ -1,0 +1,6 @@
+appId: "com.caratlane.android.f2"
+---
+- runScript: PageObjects/LoginPageObjects.js
+- runScript: PageObjects/SignupPageObjects.js
+- runScript: PageObjects/UOBPageObjects.js
+- runScript: PageObjects/EnterPasswordToLoginPageObjects.js
